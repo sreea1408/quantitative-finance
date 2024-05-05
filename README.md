@@ -1,1 +1,1 @@
-# quantitative-finance
+# Quantitative Finance
