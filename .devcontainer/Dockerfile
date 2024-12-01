@@ -9,3 +9,11 @@ RUN DEBIAN_FRONTEND=noninteractive \
     git
 
 RUN pip3 install cmake==3.31.1 ninja==1.11.1.2 --break-system-packages
+
+RUN cd ~ && \
+    apt install -y curl zip unzip tar && \
+    git clone --depth 1 --branch 2024.11.16 https://github.com/microsoft/vcpkg.git && \
+    cd vcpkg && \
+    ./bootstrap-vcpkg.sh
+
+ENV PATH="$PATH:~/vcpkg"

@@ -1,4 +1,0 @@
-#!/bin/bash
-
-export VCPKG_ROOT=`pwd`/vcpkg
-export PATH=$PATH:$VCPKG_ROOT
