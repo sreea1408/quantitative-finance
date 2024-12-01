@@ -1,0 +1,46 @@
+{
+    "version": 10,
+    "cmakeMinimumRequired": {
+        "major": 3,
+        "minor": 31,
+        "patch": 1
+    },
+    "configurePresets": [
+        {
+            "name": "linux",
+            "displayName": "Linux",
+            "description": "Sets Ninja generator, build directory",
+            "hidden": true,
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/build/${hostSystemName}/$env{CMAKE_BUILD_TYPE}",
+            "cacheVariables": {
+                "CMAKE_COMMAND": "/usr/local/bin/cmake",
+                "CMAKE_MAKE_PROGRAM": "/usr/local/bin/ninja"
+            }
+        },
+        {
+            "name": "Linux-Debug",
+            "inherits": "linux",
+            "environment": {
+                "CMAKE_BUILD_TYPE": "Debug"
+            }
+        },
+        {
+            "name": "Linux-Release",
+            "inherits": "linux",
+            "environment": {
+                "CMAKE_BUILD_TYPE": "Release"
+            }
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "Linux-Debug",
+            "configurePreset": "Linux-Debug"
+        },
+        {
+            "name": "Linux-Release",
+            "configurePreset": "Linux-Release"
+        }
+    ]
+}
