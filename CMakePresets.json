@@ -15,7 +15,8 @@
             "binaryDir": "${sourceDir}/build/${hostSystemName}/$env{CMAKE_BUILD_TYPE}",
             "cacheVariables": {
                 "CMAKE_COMMAND": "/usr/local/bin/cmake",
-                "CMAKE_MAKE_PROGRAM": "/usr/local/bin/ninja"
+                "CMAKE_MAKE_PROGRAM": "/usr/local/bin/ninja",
+                "CMAKE_TOOLCHAIN_FILE": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake"
             }
         },
         {
