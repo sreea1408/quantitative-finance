@@ -16,4 +16,5 @@ RUN cd ~ && \
     cd vcpkg && \
     ./bootstrap-vcpkg.sh
 
-ENV PATH="$PATH:~/vcpkg"
+ENV VCPKG_ROOT="~/vcpkg"
+ENV PATH="$PATH:$VCPKG_ROOT"
