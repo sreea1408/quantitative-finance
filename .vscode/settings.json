@@ -1,4 +1,10 @@
 {
     "editor.formatOnSave": true,
-    "C_Cpp.clang_format_path": "/usr/local/bin/clang-format"
+    "C_Cpp.clang_format_path": "/usr/local/bin/clang-format",
+    "C_Cpp.codeAnalysis.clangTidy.path": "/usr/local/bin/clang-tidy",
+    "C_Cpp.codeAnalysis.clangTidy.enabled": true,
+    "C_Cpp.codeAnalysis.clangTidy.args": [
+        "--fix",
+        "--format-style=file"
+    ]
 }
