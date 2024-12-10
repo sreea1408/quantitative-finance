@@ -8,7 +8,7 @@ RUN DEBIAN_FRONTEND=noninteractive \
     build-essential \
     git
 
-RUN pip3 install cmake==3.31.1 ninja==1.11.1.2 clang-format==19.1.4 --break-system-packages
+RUN pip3 install cmake==3.31.1 ninja==1.11.1.2 clang-format==19.1.4 clang-tidy==19.1.0 --break-system-packages
 
 RUN cd ~ && \
     apt install -y curl zip unzip tar pkg-config && \
