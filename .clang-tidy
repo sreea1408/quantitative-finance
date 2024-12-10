@@ -1,0 +1,14 @@
+---
+Checks: "-*,
+    boost-*,
+    bugprone-*,
+    clang-analyzer-*,
+    concurrency-*,
+    cppcoreguidelines-*,
+    hicpp-*,
+    misc-*,
+    performance-*,
+    portability-*,
+    readability-*,
+"
+FormatStyle:     none
